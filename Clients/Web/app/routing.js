@@ -10,8 +10,7 @@
     function RoutingConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('main', getState('main', '/', true))
-            .state('login', getState('login'))
-            .state('apiAccess', getState('apiAccess'))
+            .state('profile', getState('login'))
             .state('tokenReceived', getState('tokenReceived'));
 
         $urlRouterProvider.otherwise('/');
