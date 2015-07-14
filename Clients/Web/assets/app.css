@@ -1,0 +1,11 @@
+body {
+	font-family: Roboto, 'Segoe WP', 'San Francisco', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	padding-top: 70px;
+}
+
+.navbar.navbar-default {
+	font-size: 14pt;
+	padding-top: 12px;
+	background: #0078D7;
+	color: white;
+}
