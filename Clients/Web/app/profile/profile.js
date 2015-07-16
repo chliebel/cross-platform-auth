@@ -4,8 +4,11 @@
     /**
      * @constructor
      * @public
+     *
+     * @param {ProfileApi} profileApi
      */
-    function ProfileController() {
+    function ProfileController(profileApi) {
+    
     }
 
     app.module.controller('profileController', ProfileController);
