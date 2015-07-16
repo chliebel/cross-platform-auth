@@ -15,18 +15,18 @@ namespace Provider.Configuration
 
 				RedirectUris = new List<string>
 				{
-					"https://localhost:8080/modal.html",
-					"https://localhost:8080/#/tokenReceived?x=x&"
+					"http://localhost:8080/modal.html",
+					"http://localhost:8080/#/tokenReceived?x=x&"
 				},
 
 				AllowedCorsOrigins = new List<string>
 				{
-					"https://localhost:8080"
+					"http://localhost:8080"
 				},
 
 				PostLogoutRedirectUris = new List<string>
 				{
-					"https://localhost:8080/"
+					"http://localhost:8080/"
 				}
 			};
 
