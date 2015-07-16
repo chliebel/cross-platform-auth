@@ -7,10 +7,13 @@
      * @constructor
      * @public
      *
+     * @param $scope
      * @param $state
      * @param {TokenAuthentication} tokenAuthentication
      */
-    function TokenReceivedController($state, tokenAuthentication) {
+    function TokenReceivedController($scope, $state, tokenAuthentication) {
+        $scope.page.title = 'Weiterleitung…';
+
         tokenAuthentication.checkTokenAsync()
             .then(function () {
                 $state.go('profile');

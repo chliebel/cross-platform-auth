@@ -32,7 +32,7 @@
 
     app.module = angular.module("authDemo", ["ui.router"]);
 
-    app.module.constant('webApiBaseUrl', 'https://localhost:8082/');
+    app.module.constant('webApiBaseUrl', 'http://localhost:8082/');
     app.module.constant('isApp', isApp);
 
     app.module.controller('appController', function ($scope) {

@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Owin;
@@ -40,6 +41,8 @@ namespace WebApi
 			var config = new HttpConfiguration();
 			config.Routes.MapHttpRoute("Default", "api/{controller}/{action}");
 			config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+
+			config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
 
 			return config;
 		}
