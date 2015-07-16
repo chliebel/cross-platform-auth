@@ -36,7 +36,7 @@
 
         this.checkTokenAsync = function () {
             return manager.processTokenCallbackAsync();
-        }
+        };
         
         this.getAccessToken = function () {
             return manager.access_token;

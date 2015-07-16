@@ -6,7 +6,7 @@
     var isApp = !!window.cordova;
 
     // Für Apps wird die Modal-Methode verwandt, für Webseiten die „reguläre“ Weiterleitung.
-    var redirectUri = isApp ? 'http://localhost:8080/modal.html' : 'https://localhost:8080/#/tokenReceived?x=x&';
+    var redirectUri = isApp ? 'http://localhost:8080/modal.html' : 'http://localhost:8080/#/tokenReceived?x=x&';
     // Hinweis: ?x=x& ist hier erforderlich, da der OIDC Token Manager aktuell noch keine Weiterleitung
     // an Seiten mit Routing-Frameworks unterstützt. Dieser Workoround kann entfallen,
 

@@ -8,7 +8,7 @@
      * @param {ProfileApi} profileApi
      */
     function ProfileController(profileApi) {
-    
+
     }
 
     app.module.controller('profileController', ProfileController);
