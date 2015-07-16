@@ -197,3 +197,4 @@ FakesAssemblies/
 
 # Allow test certificate
 !Server/Identity/Configuration/idsrv3test.pfx
+Clients/Web/.idea
