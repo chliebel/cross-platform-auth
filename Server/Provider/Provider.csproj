@@ -7,8 +7,8 @@
     <ProjectGuid>{5845EE01-2A3D-4916-B5CA-1D5CB01005F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Identity</RootNamespace>
-    <AssemblyName>Identity</AssemblyName>
+    <RootNamespace>Provider</RootNamespace>
+    <AssemblyName>Provider</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>

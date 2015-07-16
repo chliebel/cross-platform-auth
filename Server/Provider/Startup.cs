@@ -1,10 +1,10 @@
-﻿using Identity.Configuration;
-using Owin;
+﻿using Owin;
+using Provider.Configuration;
 using Thinktecture.IdentityServer.Core.Configuration;
 using Thinktecture.IdentityServer.Core.Services;
 using Thinktecture.IdentityServer.Core.Services.InMemory;
 
-namespace Identity
+namespace Provider
 {
 	public class Startup
 	{

@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using Thinktecture.IdentityServer.Core.Services.InMemory;
 
-namespace Identity.Configuration
+namespace Provider.Configuration
 {
     public class Users
     {

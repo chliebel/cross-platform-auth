@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
 
-namespace Identity
+namespace Provider
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			using (WebApp.Start<Startup>("http://+:8080"))
+			using (WebApp.Start<Startup>("http://+:8081"))
 			{
 				Console.WriteLine("IdentityServer running...");
 				Console.ReadLine();

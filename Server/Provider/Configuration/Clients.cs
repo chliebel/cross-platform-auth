@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Thinktecture.IdentityServer.Core.Models;
 
-namespace Identity.Configuration
+namespace Provider.Configuration
 {
 	public class Clients
 	{
@@ -15,18 +15,18 @@ namespace Identity.Configuration
 
 				RedirectUris = new List<string>
 				{
-					"https://localhost:44300/modal.html",
-					"https://localhost:44300/#/tokenReceived?x=x&"
+					"https://localhost:8080/modal.html",
+					"https://localhost:8080/#/tokenReceived?x=x&"
 				},
 
 				AllowedCorsOrigins = new List<string>
 				{
-					"https://localhost:44300"
+					"https://localhost:8080"
 				},
 
 				PostLogoutRedirectUris = new List<string>
 				{
-					"https://localhost:44300/"
+					"https://localhost:8080/"
 				}
 			};
 

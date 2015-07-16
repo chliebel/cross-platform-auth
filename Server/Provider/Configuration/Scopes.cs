@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Thinktecture.IdentityServer.Core.Models;
 
-namespace Identity.Configuration
+namespace Provider.Configuration
 {
     public class Scopes
     {
