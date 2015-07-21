@@ -12,10 +12,10 @@ namespace Provider.Configuration
             {
                 new InMemoryUser
                 {
-                    Subject = "1",
+                    Subject = "alice",
                     Username = "alice",
                     Password = "secret",
-                    Claims = new List<Claim>
+					Claims = new List<Claim>
                     {
                         new Claim("name", "Alice Smith"),
                         new Claim("email", "alice@example.com"),
