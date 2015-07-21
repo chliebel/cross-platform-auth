@@ -37,13 +37,25 @@ namespace Provider.Configuration
 
 			var desktop = new Client
 			{
+				ClientName = "WPF Client",
+				ClientId = "wpf",
+				Flow = Flows.Implicit,
 
+				RedirectUris = new List<string>
+				{
+					"oob://localhost/wpfclient"
+				},
+
+				PostLogoutRedirectUris = new List<string>
+				{
+					"oob://localhost/wpfclient"
+				}
 			};
 
 			return new List<Client>
 			{
 				web,
-				mobile,
+				//mobile,
 				desktop
 			};
 		}
