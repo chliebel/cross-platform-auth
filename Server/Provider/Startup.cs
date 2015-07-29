@@ -2,6 +2,7 @@
 using Provider.Configuration;
 using Thinktecture.IdentityServer.Core.Configuration;
 using Thinktecture.IdentityServer.Core.Services;
+using Thinktecture.IdentityServer.Core.Services.Default;
 using Thinktecture.IdentityServer.Core.Services.InMemory;
 
 namespace Provider
@@ -15,7 +16,7 @@ namespace Provider
 			var users = new InMemoryUserService(Users.Get());
 			var scopes = new InMemoryScopeStore(Scopes.Get());
 			var clients = new InMemoryClientStore(Clients.Get());
-			var cors = new InMemoryCorsPolicyService(Clients.Get());
+			var cors = new DefaultCorsPolicyService() {AllowAll = true};
 
 			factory.UserService = new Registration<IUserService>(users);
 			factory.ScopeStore = new Registration<IScopeStore>(scopes);

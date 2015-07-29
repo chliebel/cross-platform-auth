@@ -23,13 +23,13 @@ namespace Provider.Configuration
 
             var webApiScope = new Scope
             {
-                Name = "webapi",
+                Name = "sample_webapi",
                 DisplayName = "Web API",
 
                 Type = ScopeType.Resource,
                 Claims = new List<ScopeClaim>
                 {
-                    new ScopeClaim("role")
+                    new ScopeClaim("name")
                 }
             };
 

@@ -7,18 +7,9 @@
 <body>
     <script src="libs/oidc-token-manager/oidc-token-manager.js"></script>
     <script>
-        var manager = new OidcTokenManager(window.opener.oidcConfiguration);
-
-        if (!window.location.hash) {
-            manager.redirectForToken();
-        }
-        else {
-            manager.processTokenCallbackAsync().then(function () {
-                window.opener.onLogin();
-            }, function (error) {
-                console.log(error);
-            });
-        }
+        var config = decodeURIComponent(window.location.hash).substr(1);
+        var manager = new OidcTokenManager(JSON.parse(config));
+        manager.redirectForToken();
     </script>
 </body>
 </html>

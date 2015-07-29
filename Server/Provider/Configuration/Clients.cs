@@ -9,19 +9,13 @@ namespace Provider.Configuration
 		{
 			var web = new Client
 			{
-				ClientName = "AngularJS Client",
-				ClientId = "angular",
+				ClientName = "AngularJS Web Client",
+				ClientId = "angular-web",
 				Flow = Flows.Implicit,
 
 				RedirectUris = new List<string>
 				{
-					"http://localhost:8080/modal.html",
 					"http://localhost:8080/#/tokenReceived?x=x&"
-				},
-
-				AllowedCorsOrigins = new List<string>
-				{
-					"http://localhost:8080"
 				},
 
 				PostLogoutRedirectUris = new List<string>
@@ -32,7 +26,20 @@ namespace Provider.Configuration
 
 			var mobile = new Client
 			{
+				ClientName = "AngularJS App Client",
+				ClientId = "angular-app",
+				Flow = Flows.Implicit,
 
+				RedirectUris = new List<string>
+				{
+					"oob://localhost/appclient"
+				},
+				
+
+				PostLogoutRedirectUris = new List<string>
+				{
+					"oob://localhost/appclient/logout"
+				}
 			};
 
 			var desktop = new Client
@@ -48,14 +55,14 @@ namespace Provider.Configuration
 
 				PostLogoutRedirectUris = new List<string>
 				{
-					"oob://localhost/wpfclient"
+					"oob://localhost/wpfclient/logout"
 				}
 			};
 
 			return new List<Client>
 			{
 				web,
-				//mobile,
+				mobile,
 				desktop
 			};
 		}

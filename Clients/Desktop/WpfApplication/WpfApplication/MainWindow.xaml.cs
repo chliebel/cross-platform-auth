@@ -10,7 +10,7 @@ namespace WpfApplication
 {
 	public partial class MainWindow
 	{
-		WebViewWindow _login;
+		readonly WebViewWindow _login;
 		AuthorizeResponse _response;
 
 		public MainWindow()
@@ -40,10 +40,8 @@ namespace WpfApplication
 			var startUrl = client.CreateAuthorizeUrl(
 				clientId: "wpf",
 				responseType: "token",
-				scope: "webapi",
-				redirectUri: "oob://localhost/wpfclient",
-				state: "random_state",
-				nonce: "random_nonce");
+				scope: "sample_webapi",
+				redirectUri: "oob://localhost/wpfclient");
 
 			_login.Show();
 			_login.Start(new Uri(startUrl), new Uri("oob://localhost/wpfclient"));

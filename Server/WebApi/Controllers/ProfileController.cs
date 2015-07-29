@@ -10,8 +10,9 @@ namespace WebApi.Controllers
 		[HttpGet]
 		public IHttpActionResult GetProfile()
 		{
-			var subject = ClaimsPrincipal.Current.FindFirst("sub").Value;
-			var profile = GetProfileOrDefault(subject);
+			var subject = ClaimsPrincipal.Current.FindFirst("sub");
+			var name = ClaimsPrincipal.Current.FindFirst("name");
+			var profile = GetProfileOrDefault(subject, name);
 
 			if (profile == null)
 			{
@@ -21,13 +22,13 @@ namespace WebApi.Controllers
 			return Ok(profile);
 		}
 
-		private static Profile GetProfileOrDefault(string subject)
+		private static Profile GetProfileOrDefault(Claim subject, Claim name)
 		{
-			if (subject == "alice")
+			if (subject != null && name != null && subject.Value == "alice")
 			{
 				return new Profile
 				{
-					FullName = "Alice Secret",
+					FullName = name.Value,
 					Age = 24,
 					ImageUrl = "http://api.randomuser.me/portraits/women/39.jpg"
 				};

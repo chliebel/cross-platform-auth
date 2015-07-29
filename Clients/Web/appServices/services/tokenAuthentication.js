@@ -9,8 +9,9 @@
      * @param $state
      * @param $rootScope
      * @param {Boolean} isApp
+     * @param oidcConfigJson
      **/
-    function TokenAuthentication($window, $state, $rootScope, isApp) {
+    function TokenAuthentication($window, $state, $rootScope, isApp, oidcConfigJson) {
         var manager;
         var popup;
 
@@ -21,7 +22,18 @@
 
         this.login = function () {
             if (isApp) {
-                popup = $window.open('modal.html', '_blank', 'location=no,toolbar=no');
+                popup = $window.open('modal.html#' + encodeURIComponent(oidcConfigJson), '_blank', 'location=no;EnableViewPortScale=yes');
+                popup.addEventListener('loadstart', function (event) {
+                    alert(event.url);
+                    var redirectUriIndex = event.url.indexOf($window.oidcConfiguration.redirect_uri);
+                    if (redirectUriIndex !== -1) {
+                        manager.processTokenCallbackAsync(event.url.substr(redirectUriIndex))
+                            .then(function () {
+                                popup.close();
+                                $state.go('profile');
+                            });
+                    }
+                });
             } else {
                 manager.redirectForToken();
             }
@@ -40,10 +52,6 @@
         
         this.getAccessToken = function () {
             return manager.access_token;
-        };
-
-        this.getProfile = function () {
-            return manager.profile;
         };
 
         this.logout = function () {
