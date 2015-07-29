@@ -24,7 +24,7 @@ namespace Provider.Configuration
             var webApiScope = new Scope
             {
                 Name = "sample_webapi",
-                DisplayName = "Web API",
+                DisplayName = "Sample Web API",
 
                 Type = ScopeType.Resource,
                 Claims = new List<ScopeClaim>
