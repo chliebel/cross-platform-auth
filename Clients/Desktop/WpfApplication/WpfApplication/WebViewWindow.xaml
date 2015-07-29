@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WpfApplication.WebViewWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WebViewWindow" Height="472" Width="659">
+        Title="Anmelden" Height="472" Width="659">
     <Grid>
         <WebBrowser Name="webView"></WebBrowser>
     </Grid>
