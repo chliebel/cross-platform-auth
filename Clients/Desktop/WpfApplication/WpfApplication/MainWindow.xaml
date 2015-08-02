@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WpfApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="WPF Auth Demo App" Height="350" Width="525">
     <Grid Margin="0,0,-8,-5">
         <Button Content="Anmelden" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="163" Click="AuthenticateClick"/>
         <Button Content="Profil abrufen" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="163" Click="PerformRequestClick"/>

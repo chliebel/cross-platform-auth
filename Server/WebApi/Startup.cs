@@ -24,7 +24,7 @@ namespace WebApi
 			return new IdentityServerBearerTokenAuthenticationOptions
 			{
 				Authority = "http://localhost:8081",
-				RequiredScopes = new[] { "webapi" }
+				RequiredScopes = new[] { "sample_webapi" }
 			};
 		}
 
